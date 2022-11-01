@@ -53,7 +53,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div className="col-lg-2 d-lg-block d-none offset-lg-1">
                         <div className="wrap">
                             <h4>Страницы</h4>
@@ -78,7 +78,7 @@ const Footer = () => {
             </div>
 
             <div className="copyright">
-                <h6>Copyright 2022 <a href="zamaan.uz"><i><img src="/img/footerLogo.svg" alt="zamaan" /></i></a> All rights reserved.</h6>
+                <h6>Copyright 2022 <a target={'_blank'} rel="noreferrer" href="https://zamaan.uz/"><i><img src="/img/footerLogo.svg" alt="zamaan" /></i></a> All rights reserved.</h6>
             </div>
         </div>
     )
