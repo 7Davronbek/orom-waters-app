@@ -52,8 +52,8 @@ const Navbar = () => {
                                 </div> */}
 
                                 <select onChange={changeLanguage} name="" id="">
-                                    <option selected={getLanguage() === 'ru'} value="ru">Ru</option>
-                                    <option selected={getLanguage() === 'uz'} value="uz">Uz</option>
+                                    <option selected={getLanguage() === 'ru'} value="ru">RU</option>
+                                    <option selected={getLanguage() === 'uz'} value="uz">UZ</option>
                                     <option selected={getLanguage() === 'en'} value="en">EN</option>
                                 </select>
 

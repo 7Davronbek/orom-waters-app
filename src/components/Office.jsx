@@ -1,6 +1,7 @@
 import { faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import { getText } from '../locales'
 
 const Office = () => {
     return (
@@ -8,11 +9,11 @@ const Office = () => {
             <div className="container">
                 <img className='w-100 d-lg-block d-none' src="img/map.png" alt="" />
                 <div className="blok">
-                    <h4>Главный офис</h4>
+                    <h4>{getText('office1')}</h4>
                     <div className="d-flex  mb-3">
                         <div className="icon"><FontAwesomeIcon icon={faLocationDot} /></div>
                         <div className='d-flex flex-column'>
-                            <a href="tel:+998988007719">Ташкентская область, Кибрайский район, Кибрайский район, Берунийский МФУ, улица Обихаёт, дом 36</a>
+                            <a href="tel:+998988007719">{getText('office2')}</a>
                         </div>
                     </div>
                     <div className="d-flex">

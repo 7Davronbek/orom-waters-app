@@ -55,4 +55,6 @@ export const uz = {
     "footer5": "Operator",
     "footer6": "Kuryer",
     "footer7": "Marketolog",
+
+    "sum": "so'm"
 }

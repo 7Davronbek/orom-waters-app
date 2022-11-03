@@ -6,6 +6,7 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { API_PATH } from '../tools/constants'
+import { getText } from '../locales';
 
 const Catalog = () => {
     const [activeTab, setActiveTab] = useState('0');
@@ -60,7 +61,7 @@ const Catalog = () => {
                                     <NavLink
                                         className={classnames({ active: activeTab === '0' })}
                                         onClick={() => { toggle('0'); setProductId('') }}>
-                                        Все категории
+                                        {getText('allCategory1')}
                                     </NavLink>
                                 </NavItem>
                                 {categories && categories.slice(0,2).map((item, index) => (
@@ -97,8 +98,8 @@ const Catalog = () => {
                                                                     <h5> <span><img src="/img/red.svg" alt="orom suvlari" /></span>  Нет в наличии </h5>
                                                                 }
                                                                 <div>
-                                                                    <h6 className='oldPrice'>{item.price} сум</h6>
-                                                                    <h6>{item.new_price} сум</h6>
+                                                                    <h6 className='oldPrice'>{item.price} {getText('sum')}</h6>
+                                                                    <h6>{item.new_price} {getText('sum')}</h6>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -115,7 +116,7 @@ const Catalog = () => {
 
 
                             <div className="mybtn text-end">
-                                <Link to="/catalog">Ещё <FontAwesomeIcon icon={faChevronRight} /></Link>
+                                <Link to="/catalog">{getText('allCategory2')} <FontAwesomeIcon icon={faChevronRight} /></Link>
                             </div>
                         </div>
                     </div>

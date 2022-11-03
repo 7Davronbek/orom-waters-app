@@ -55,4 +55,6 @@ export const ru = {
     "footer5": "Оператор",
     "footer6": "Курьер",
     "footer7": "Маркетолог",
+
+    "sum": "сум"
 }

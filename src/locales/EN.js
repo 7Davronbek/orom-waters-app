@@ -55,4 +55,6 @@ export const en = {
     "footer5": "Operator",
     "footer6": "Courier",
     "footer7": "Marketer",
+
+    "sum": "sum"
 }

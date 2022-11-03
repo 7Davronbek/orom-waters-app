@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { getText } from '../locales'
 
 const About = () => {
     return (
@@ -17,12 +18,12 @@ const About = () => {
 
                     <div className="col-lg-5 zet">
                         <div className="info">
-                            <h2>О НАС</h2>
+                            <h2>{getText('about1')}</h2>
                             <img className='logo' src="img/headerlogo.png" alt="" />
-                            <h6>Наш интернет-магазин реализует воду самых лучших марок и предлагает интересные новинки.</h6>
-                            <p>Качество – это главный приоритет в нашей работе, поэтому мы обеспечиваем быструю доставку вкусной и полезной воды, помогая заботиться о своем здоровье и здоровье близких.</p>
+                            <h6>{getText('about2')}</h6>
+                            <p>{getText('about3')}</p>
                             <div className="more">
-                                <Link to='/about'>Подробнее</Link>
+                                <Link to='/about'>{getText('header2')}</Link>
                             </div>
                         </div>
                     </div>

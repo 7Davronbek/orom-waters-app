@@ -18,6 +18,7 @@ import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 import classnames from 'classnames';
 import axios from 'axios';
 import { API_PATH } from '../tools/constants';
+import { getText } from '../locales';
 
 const Services = () => {
     const [open, setOpen] = useState('0');
@@ -50,16 +51,14 @@ const Services = () => {
     }, [])
 
 
-
-
     return (
         <div className='Services'>
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-6">
                         <div className="info">
-                            <h2 className='main-title'>Наши услуги</h2>
-                            <h6>Наша служба доставки предоставляет целый комплекс услуг:</h6>
+                            <h2 className='main-title'>{getText('services1')}</h2>
+                            <h6>{getText('services2')}</h6>
                             <Nav tabs className='myNavs border-none'>
                                 <Accordion className='service__list w-100 border2' open={open} toggle={toggle}>
                                     {services && services.map((item, index) => (
@@ -89,6 +88,7 @@ const Services = () => {
                     </div>
                     <div className="col-lg-6">
                         <TabContent activeTab={activeTab}>
+
                             {services && services.map((item, index) => (
                                 <TabPane key={index} tabId={index + 1}>
                                     <Swiper pagination={true} autoplay={true} modules={[Pagination, Autoplay]} className="mySwiper">
@@ -100,37 +100,6 @@ const Services = () => {
                                     </Swiper>
                                 </TabPane>
                             ))}
-
-                            {/* <TabPane tabId="1">
-                                <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
-                                    <SwiperSlide><img className='w-100' src="img/service (1).png" alt="" /></SwiperSlide>
-                                    <SwiperSlide><img className='w-100' src="img/service (2).png" alt="" /></SwiperSlide>
-                                    <SwiperSlide><img className='w-100' src="img/service (3).png" alt="" /></SwiperSlide>
-                                    <SwiperSlide><img className='w-100' src="img/service (4).png" alt="" /></SwiperSlide>
-
-                                </Swiper>
-                            </TabPane>
-                            <TabPane tabId="2">
-                                <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
-                                    <SwiperSlide><img className='w-100' src="img/service (5).png" alt="" /></SwiperSlide>
-                                    <SwiperSlide><img className='w-100' src="img/service (6).png" alt="" /></SwiperSlide>
-                                    <SwiperSlide><img className='w-100' src="img/service (7).png" alt="" /></SwiperSlide>
-                                    <SwiperSlide><img className='w-100' src="img/service (8).png" alt="" /></SwiperSlide>
-
-                                </Swiper>
-                            </TabPane>
-                            <TabPane tabId="3">
-                                <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
-                                    <SwiperSlide><img className='w-100' src="img/service (13).png" alt="" /></SwiperSlide>
-                                    <SwiperSlide><img className='w-100' src="img/service (14).png" alt="" /></SwiperSlide>
-                                    <SwiperSlide><img className='w-100' src="img/service (15).png" alt="" /></SwiperSlide>
-                                    <SwiperSlide><img className='w-100' src="img/service (16).png" alt="" /></SwiperSlide>
-                                    <SwiperSlide><img className='w-100' src="img/service (17).png" alt="" /></SwiperSlide>
-                                    <SwiperSlide><img className='w-100' src="img/service (18).png" alt="" /></SwiperSlide>
-                                    <SwiperSlide><img className='w-100' src="img/service (19).png" alt="" /></SwiperSlide>
-
-                                </Swiper>
-                            </TabPane> */}
 
                         </TabContent>
 

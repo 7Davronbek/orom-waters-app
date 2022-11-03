@@ -4,6 +4,7 @@ import { faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { getText } from '../locales'
 
 const Footer = () => {
     return (
@@ -18,7 +19,7 @@ const Footer = () => {
                                 </div>
                             </div>
                             <div className="col-12">
-                                <p className='paragraf'>Компания OROM SUVLARI занимается доставкой бутилированной воды по Ташкенту и  по городу Чирчик, Кибрайского района.</p>
+                                <p className='paragraf'>{getText('footer1')}</p>
                                 <div className="socials">
                                     <ul>
                                         <li>
@@ -37,7 +38,7 @@ const Footer = () => {
                     </div>
                     <div className="col-lg-3 d-lg-block d-none offset-lg-1">
                         <div className="wrap">
-                            <h4>Контакты</h4>
+                            <h4>{getText('footer2')}</h4>
                             <div className="d-flex mb-3">
                                 <div className="icon"><FontAwesomeIcon icon={faPhone} /></div>
                                 <div className='d-flex flex-column'>
@@ -48,7 +49,7 @@ const Footer = () => {
                             <div className="d-flex">
                                 <div className="icon"><FontAwesomeIcon icon={faLocationDot} /></div>
                                 <div className='d-flex flex-column'>
-                                    <a href="tel:+998988007719">Ташкентская область, Кибрайский район, МФУ Беруний, улица Обихаёт, дом 36</a>
+                                    <a href="tel:+998988007719">{getText('office2')}</a>
                                 </div>
                             </div>
                         </div>
@@ -56,21 +57,21 @@ const Footer = () => {
 
                     <div className="col-lg-2 d-lg-block d-none offset-lg-1">
                         <div className="wrap">
-                            <h4>Страницы</h4>
+                            <h4>{getText('footer3')}</h4>
                             <ul className='links-menu'>
-                                <li><Link to="/about">О компании</Link></li>
-                                <li><Link to="/catalog">Каталог</Link></li>
-                                <li><Link to="/contacts">Контакт</Link></li>
+                                <li><Link to="/about">{getText('footer2')}</Link></li>
+                                <li><Link to="/catalog">{getText('catalog')}</Link></li>
+                                <li><Link to="/contacts">{getText('footer3')}</Link></li>
                             </ul>
                         </div>
                     </div>
                     <div className="col-lg-2 d-lg-block d-none offset-lg-1">
                         <div className="wrap">
-                            <h4>Вакансии</h4>
+                            <h4>{getText('footer4')}</h4>
                             <ul className='links-menu'>
-                                <li><a href="/about">Оператор</a></li>
-                                <li><a href="/questions">Курьер</a></li>
-                                <li><a href="/contacts">Маркетолог</a></li>
+                                <li><a href="/about">{getText('footer5')}</a></li>
+                                <li><a href="/questions">{getText('footer6')}</a></li>
+                                <li><a href="/contacts">{getText('footer7')}</a></li>
                             </ul>
                         </div>
                     </div>

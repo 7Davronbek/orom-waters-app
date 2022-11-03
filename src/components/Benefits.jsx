@@ -1,11 +1,12 @@
 import React from 'react'
+import { getText } from '../locales'
 
 const Benefits = () => {
     return (
         <div className='Benefits'>
             <div className="container">
                 <div className="text-center">
-                    <h2 className='main-title'>Наши примущества</h2>
+                    <h2 className='main-title'>{getText('benefits1')}</h2>
                 </div>
                 <div className="row justify-content-center">
                     <div className="col-lg-3 col-md-4 col-6 p-0">

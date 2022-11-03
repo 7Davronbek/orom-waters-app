@@ -1,4 +1,5 @@
 import React from 'react'
+import { getText } from '../locales'
 
 const Ingredients = () => {
     return (
@@ -8,7 +9,7 @@ const Ingredients = () => {
             </div>
             <div className="container">
                 <div className="text-center">
-                    <h2 className='main-title'>Состав воды</h2>
+                    <h2 className='main-title'>{getText('include1')}</h2>
                 </div>
                 <div className="row justify-content-center">
                     <div className="col-10">
@@ -16,15 +17,15 @@ const Ingredients = () => {
                             <img className='w-100' src="img/sostav.png" alt="" />
                         </div>
                         <ul>
-                            <li>Хлорид CI-</li>
-                            <li>Калий К+</li>
-                            <li>Гидро карбонат HCO3-</li>
-                            <li>Сульфат SO4-</li>
+                            <li>{getText('include2')}</li>
+                            <li>{getText('include3')}</li>
+                            <li>{getText('include4')}</li>
+                            <li>{getText('include5')}</li>
                         </ul>
                         <ul>
-                            <li>Натрий Na+</li>
-                            <li>Магний Mg++</li>
-                            <li>Кальций Ca++</li>
+                            <li>{getText('include6')}</li>
+                            <li>{getText('include7')}</li>
+                            <li>{getText('include8')}</li>
                         </ul>
                     </div>
                 </div>
