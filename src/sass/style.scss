@@ -595,13 +595,13 @@ body {
             top: -28%;
 
             @media (max-width:992px) {
-                display: none;
-                top: -11%;
+                // display: none;
+                top: -82px;
             }
 
-            @media (max-width:1440px) {
-                top: -21%;
-            }
+            // @media (max-width:1440px) {
+            //     top: -21%;
+            // }
         }
 
         .wave1 {

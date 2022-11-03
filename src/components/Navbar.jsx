@@ -39,10 +39,17 @@ const Navbar = () => {
                         </div>
                         <div className="col-2 offset-lg-5 d-lg-block d-none">
                             <div className="btns">
-                                <div className="search">
+                                {/* <div className="search">
                                     <input id='search' type="search" />
                                     <label htmlFor="search"><FontAwesomeIcon icon={faSearch} /></label>
-                                </div>
+                                </div> */}
+
+                                <select name="" id="">
+                                    <option value="">Uz</option>
+                                    <option value="">Ru</option>
+                                    <option value="">En</option>
+                                </select>
+
                                 <div className="order mybtn">
                                     <a href="tel: +998 (98) 800 77 19">Заказать</a>
                                 </div>
