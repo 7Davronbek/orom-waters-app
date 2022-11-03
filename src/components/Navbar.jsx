@@ -37,8 +37,8 @@ const Navbar = () => {
                         <div className={`col-3 offset-lg-1 mobileWrap ${burger ? '' : 'burgered'}`}>
                             <ul className="nav-menu">
                                 <li><Link className={location.pathname === '/' && 'active'} onClick={() => setBurger(!burger)} to="/">{getText('main')}</Link></li>
-                                <li><Link className={location.pathname === '/about' && 'active'} onClick={() => setBurger(!burger)} to="/about">О компании</Link></li>
-                                <li><Link className={location.pathname === '/catalog' && 'active'} onClick={() => setBurger(!burger)} to="/catalog">Каталог</Link></li>
+                                <li><Link className={location.pathname === '/about' && 'active'} onClick={() => setBurger(!burger)} to="/about">{getText('aboutCompany')}</Link></li>
+                                <li><Link className={location.pathname === '/catalog' && 'active'} onClick={() => setBurger(!burger)} to="/catalog">{getText('catalog')}</Link></li>
                             </ul>
                             <div className="imggg d-lg-none d-block">
                                 <img src="img/burger.png" alt="" />
@@ -58,7 +58,7 @@ const Navbar = () => {
                                 </select>
 
                                 <div className="order mybtn">
-                                    <a href="tel: +998 (98) 800 77 19">Заказать</a>
+                                    <a href="tel: +998 (98) 800 77 19">{getText('order')}</a>
                                 </div>
                             </div>
                         </div>
