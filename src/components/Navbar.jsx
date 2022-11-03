@@ -2,6 +2,8 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { getLanguage, getText } from '../locales'
+import { LANGUAGE } from '../tools/constants'
 
 const Navbar = () => {
     const [navbar, setNavbar] = useState(false)
@@ -17,6 +19,11 @@ const Navbar = () => {
     }
 
     window.addEventListener('scroll', changeNavbar);
+
+    const changeLanguage = e => {
+        localStorage.setItem(LANGUAGE, e.target.value)
+        document.location.reload(true)
+    }
     return (
         <>
             <div className={`Navbar ${navbar ? 'active' : ''}`}>
@@ -29,7 +36,7 @@ const Navbar = () => {
                         </div>
                         <div className={`col-3 offset-lg-1 mobileWrap ${burger ? '' : 'burgered'}`}>
                             <ul className="nav-menu">
-                                <li><Link className={location.pathname === '/' && 'active'} onClick={() => setBurger(!burger)} to="/">Главная</Link></li>
+                                <li><Link className={location.pathname === '/' && 'active'} onClick={() => setBurger(!burger)} to="/">{getText('main')}</Link></li>
                                 <li><Link className={location.pathname === '/about' && 'active'} onClick={() => setBurger(!burger)} to="/about">О компании</Link></li>
                                 <li><Link className={location.pathname === '/catalog' && 'active'} onClick={() => setBurger(!burger)} to="/catalog">Каталог</Link></li>
                             </ul>
@@ -44,10 +51,10 @@ const Navbar = () => {
                                     <label htmlFor="search"><FontAwesomeIcon icon={faSearch} /></label>
                                 </div> */}
 
-                                <select name="" id="">
-                                    <option value="">Uz</option>
-                                    <option value="">Ru</option>
-                                    <option value="">En</option>
+                                <select onChange={changeLanguage} name="" id="">
+                                    <option selected={getLanguage() === 'ru'} value="ru">Ru</option>
+                                    <option selected={getLanguage() === 'uz'} value="uz">Uz</option>
+                                    <option selected={getLanguage() === 'en'} value="en">EN</option>
                                 </select>
 
                                 <div className="order mybtn">
