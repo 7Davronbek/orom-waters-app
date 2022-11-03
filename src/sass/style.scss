@@ -465,6 +465,7 @@ body {
             }
 
             @media (max-width:772px) {
+                width: 90%;
                 position: absolute;
                 bottom: 30%;
 
@@ -531,6 +532,7 @@ body {
             top: -35%;
 
             @media (max-width:992px) {
+                display: none;
                 top: -9%;
             }
 
@@ -593,6 +595,7 @@ body {
             top: -28%;
 
             @media (max-width:992px) {
+                display: none;
                 top: -11%;
             }
 

@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { Pagination } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 import {
     Accordion,
     AccordionBody,
@@ -91,7 +91,7 @@ const Services = () => {
                         <TabContent activeTab={activeTab}>
                             {services && services.map((item, index) => (
                                 <TabPane key={index} tabId={index + 1}>
-                                    <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+                                    <Swiper pagination={true} autoplay={true} modules={[Pagination, Autoplay]} className="mySwiper">
                                         {item.service_images && item.service_images.map((item2, index2) => (
                                             <>
                                                 <SwiperSlide key={index2}><img className='w-100' src={item2.image} alt="orom suvlari" /></SwiperSlide>
@@ -100,6 +100,7 @@ const Services = () => {
                                     </Swiper>
                                 </TabPane>
                             ))}
+
                             {/* <TabPane tabId="1">
                                 <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
                                     <SwiperSlide><img className='w-100' src="img/service (1).png" alt="" /></SwiperSlide>

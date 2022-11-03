@@ -18,7 +18,7 @@ const Footer = () => {
                                 </div>
                             </div>
                             <div className="col-12">
-                                <p className='paragraf'>Компания OROM SUVLARI занимается доставкой бутилированной воды по Ташкенту.</p>
+                                <p className='paragraf'>Компания OROM SUVLARI занимается доставкой бутилированной воды по Ташкенту и  по городу Чирчик, Кибрайского района.</p>
                                 <div className="socials">
                                     <ul>
                                         <li>
@@ -48,7 +48,7 @@ const Footer = () => {
                             <div className="d-flex">
                                 <div className="icon"><FontAwesomeIcon icon={faLocationDot} /></div>
                                 <div className='d-flex flex-column'>
-                                    <a href="tel:+998988007719">Ташкентская область, Кибрайский район, Кибрайский район, Берунийский МФУ, улица Обихаёт, дом 36</a>
+                                    <a href="tel:+998988007719">Ташкентская область, Кибрайский район, МФУ Беруний, улица Обихаёт, дом 36</a>
                                 </div>
                             </div>
                         </div>
