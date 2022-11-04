@@ -64,7 +64,7 @@ const Catalog = () => {
                                         {getText('allCategory1')}
                                     </NavLink>
                                 </NavItem>
-                                {categories && categories.slice(0,2).map((item, index) => (
+                                {categories && categories.slice(0, 2).map((item, index) => (
                                     <NavItem key={index + 1}>
                                         <NavLink
                                             className={classnames({ active: activeTab === item.id })}
@@ -80,7 +80,7 @@ const Catalog = () => {
                                     {loader ? <>
                                         <div className="col-lg-4 col-6 mb-lg-5 mb-3 Loader"><div className="cards"></div></div>
                                     </> :
-                                        filterProducts && filterProducts.slice(0,3).map((item, index) => (
+                                        filterProducts && filterProducts.slice(0, 3).map((item, index) => (
                                             <div key={index} className="col-lg-4 col-6 mb-lg-5 mb-3">
                                                 <div className="card">
                                                     <div className="card-content">
@@ -94,19 +94,21 @@ const Catalog = () => {
 
                                                             <div className="d-lg-flex justify-content-between">
                                                                 {item.is_exist ?
-                                                                    <h5>   <span><img src="/img/green.svg" alt="orom suvlari" /></span>  Есть в наличии  </h5> :
-                                                                    <h5> <span><img src="/img/red.svg" alt="orom suvlari" /></span>  Нет в наличии </h5>
+                                                                    <h5><span><img src="/img/green.svg" alt="orom suvlari" /></span>  {getText('allCategory3')}  </h5> :
+                                                                    <h5><span><img src="/img/red.svg" alt="orom suvlari" /></span>  {getText('allCategory4')} </h5>
                                                                 }
                                                                 <div>
-                                                                    <h6 className='oldPrice'>{item.price} {getText('sum')}</h6>
-                                                                    <h6>{item.new_price} {getText('sum')}</h6>
+
+                                                                    {item.price && <h6 className='oldPrice'>{item.price} {getText('sum')}</h6>}
+                                                                    {item.new_price && <h6>{item.new_price} {getText('sum')}</h6>}
+
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
 
                                                     <div className="more">
-                                                        <a href="tel: +998988007719">Заказать</a>
+                                                        <a href="tel: +998988007719">{getText('order')}</a>
                                                     </div>
                                                 </div>
                                             </div>

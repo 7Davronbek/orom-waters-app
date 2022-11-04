@@ -42,6 +42,8 @@ export const uz = {
 
     "allCategory1": "Barcha toifalar",
     "allCategory2": "Ko'proq",
+    "allCategory3": "Mavjud",
+    "allCategory4": "Mavjud emas",
 
     "office1": "Bosh ofis",
     "office2": "Toshkent viloyati, Qibray tumani, Beruniy MFY, Obixayot ko‘chasi, 36-uy.",

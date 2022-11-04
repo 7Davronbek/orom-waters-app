@@ -42,6 +42,8 @@ export const en = {
 
     "allCategory1": "All categories",
     "allCategory2": "More",
+    "allCategory3": "Available",
+    "allCategory4": "Not available",
 
     "office1": "Main office",
     "office2": "Tashkent region, Kibray district, Beruni MFP, Obikhayot street, house 36",

@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import { API_PATH } from '../tools/constants';
+import { getText } from '../locales';
 
 const Catalog = () => {
     const [activeTab, setActiveTab] = useState('0');
@@ -94,19 +95,20 @@ const Catalog = () => {
 
                                                             <div className="d-lg-flex justify-content-between">
                                                                 {item.is_exist ?
-                                                                    <h5>   <span><img src="/img/green.svg" alt="orom suvlari" /></span>  Есть в наличии  </h5> :
-                                                                    <h5> <span><img src="/img/red.svg" alt="orom suvlari" /></span>  Нет в наличии </h5>
+                                                                    <h5><span><img src="/img/green.svg" alt="orom suvlari" /></span>  {getText('allCategory3')}  </h5> :
+                                                                    <h5><span><img src="/img/red.svg" alt="orom suvlari" /></span>  {getText('allCategory4')} </h5>
                                                                 }
                                                                 <div>
-                                                                    <h6 className='oldPrice'>{item.price} сум</h6>
-                                                                    <h6>{item.new_price} сум</h6>
+
+                                                                    {item.price && <h6 className='oldPrice'>{item.price} {getText('sum')}</h6>}
+                                                                    {item.new_price && <h6>{item.new_price} {getText('sum')}</h6>}
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
 
                                                     <div className="more">
-                                                        <a href="tel: +998988007719">Заказать</a>
+                                                        <a href="tel: +998988007719">{getText('order')}</a>
                                                     </div>
                                                 </div>
                                             </div>
