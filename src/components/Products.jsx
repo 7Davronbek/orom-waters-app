@@ -82,7 +82,7 @@ const Catalog = () => {
                                         <div className="col-lg-4 col-6 mb-lg-5 mb-3 Loader"><div className="cards"></div></div>
                                     </> :
                                         filterProducts && filterProducts.map((item, index) => (
-                                            <div key={index} className="col-lg-4 col-6 mb-lg-5 mb-3">
+                                            <div key={index} className="col-lg-4 mb-lg-5 mb-3">
                                                 <div className="card">
                                                     <div className="card-content">
                                                         <div className="img">

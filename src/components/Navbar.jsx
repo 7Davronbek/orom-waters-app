@@ -39,6 +39,15 @@ const Navbar = () => {
                                 <li><Link className={location.pathname === '/' && 'active'} onClick={() => setBurger(!burger)} to="/">{getText('main')}</Link></li>
                                 <li><Link className={location.pathname === '/about' && 'active'} onClick={() => setBurger(!burger)} to="/about">{getText('aboutCompany')}</Link></li>
                                 <li><Link className={location.pathname === '/catalog' && 'active'} onClick={() => setBurger(!burger)} to="/catalog">{getText('catalog')}</Link></li>
+                                <li className='mobileLang '>
+
+                                    <select className='select' onChange={changeLanguage} name="" id="">
+                                        <option selected={getLanguage() === 'ru'} value="ru">RU</option>
+                                        <option selected={getLanguage() === 'uz'} value="uz">UZ</option>
+                                        <option selected={getLanguage() === 'en'} value="en">EN</option>
+                                    </select>
+
+                                </li>
                             </ul>
                             <div className="imggg d-lg-none d-block">
                                 <img src="img/burger.png" alt="" />
@@ -51,7 +60,7 @@ const Navbar = () => {
                                     <label htmlFor="search"><FontAwesomeIcon icon={faSearch} /></label>
                                 </div> */}
 
-                                <select onChange={changeLanguage} name="" id="">
+                                <select className='select me-3' onChange={changeLanguage} name="" id="">
                                     <option selected={getLanguage() === 'ru'} value="ru">RU</option>
                                     <option selected={getLanguage() === 'uz'} value="uz">UZ</option>
                                     <option selected={getLanguage() === 'en'} value="en">EN</option>
