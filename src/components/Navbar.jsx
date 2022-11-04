@@ -1,5 +1,5 @@
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faSearch } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { getLanguage, getText } from '../locales'
@@ -53,8 +53,10 @@ const Navbar = () => {
                                 <img src="img/burger.png" alt="" />
                             </div>
                         </div>
+                        <div onClick={() => setBurger(false)} className={`mobileBlur ${burger ? 'active' : ''}`}></div>
                         <div className="col-2 offset-lg-5 d-lg-block d-none">
                             <div className="btns">
+
                                 {/* <div className="search">
                                     <input id='search' type="search" />
                                     <label htmlFor="search"><FontAwesomeIcon icon={faSearch} /></label>
