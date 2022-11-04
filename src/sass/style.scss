@@ -190,6 +190,11 @@ body {
             opacity: 0;
             visibility: hidden;
             transition: all .4s ease-in-out;
+            display: none;
+
+            @media(max-width: 992px) {
+                display: block;
+            }
 
             &.active {
                 opacity: 1;
