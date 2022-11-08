@@ -50,7 +50,7 @@ const Catalog = () => {
         <>
             <div className='Catalog'>
                 <div className="text-center mb-3">
-                    <h2 className='main-title'>Каталог</h2>
+                    <h2 className='main-title'>{getText('catalog')}</h2>
                 </div>
                 <div className="container">
                     <div className="row mb-5">
@@ -60,7 +60,7 @@ const Catalog = () => {
                                     <NavLink
                                         className={classnames({ active: activeTab === '0' })}
                                         onClick={() => { toggle('0'); setProductId('') }}>
-                                        Все категории
+                                        {getText('allCategory1')}
                                     </NavLink>
                                 </NavItem>
                                 {categories && categories.map((item, index) => (
