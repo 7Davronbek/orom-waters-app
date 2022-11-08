@@ -91,10 +91,24 @@ const Services = () => {
 
                             {services && services.map((item, index) => (
                                 <TabPane key={index} tabId={index + 1}>
-                                    <Swiper pagination={true} autoplay={true} modules={[Pagination, Autoplay]} className="mySwiper">
+                                    <Swiper
+                                        spaceBetween={30}
+                                        centeredSlides={true}
+                                        autoplay={{
+                                            delay: 2500,
+                                            disableOnInteraction: false,
+                                        }}
+                                        pagination={{
+                                            clickable: true,
+                                        }}
+                                        navigation={true}
+                                        modules={[Autoplay, Pagination]}
+                                        className="mySwiper"
+                                    >
+
                                         {item.service_images && item.service_images.map((item2, index2) => (
                                             <>
-                                                <SwiperSlide key={index2}><img className='w-100' src={item2.image} alt="orom suvlari" /></SwiperSlide>
+                                                <SwiperSlide key={index2}><><img className='w-100' src={item2.image} alt="orom suvlari" /></></SwiperSlide>
                                             </>
                                         ))}
                                     </Swiper>
@@ -104,9 +118,10 @@ const Services = () => {
                         </TabContent>
 
                     </div>
+
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
